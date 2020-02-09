@@ -1,0 +1,26 @@
+- ไดร์ฟ A ใช้งานกับ floppy disk
+- เปลี่ยน drive ให้พิมพ์ ชื่อไฟล์:
+- mkdir สร้างdirectory(floder)
+- cd change directory (เปลี่ยนที่การเข้าถึง)
+- git --version เช็ค version ของgit (เช็กว่าใช้งานได้มั้ย)
+
+การจะสร้างgitเก็บไฟล์
+1. ต้องมีโปรแกรม git bash
+2. สร้างdirectary และ คลิกขวาเลือก git bash here
+3. พิมพ์command git init จะเป็นการสร้างโฟลเดอร์ที่เป็นgit  (git project)
+4. ทำการสร้างไฟล์ หรือวางไฟล์
+5. git status เช็กว่าน่ะตอนนี้ gitของเรามีสถานะอะไร ถ้ายังเป็นสถานะที่ไม่สมบูรณ์(ขึ้นตัวอักษรสีแดง) ให้ทำการgit add fileงานตัวเองเข้าไป 
+ุ6. หลังจาก git add เราจะต้อง ทำการเก็บcheck point หรือ จุดเซฟ เพื่อให้เราสามารถกลับมาแก้ไขได้ โดยใช้คำสั่ง git commit -m "ชื่อcheckpoint"
+   - เราจำเป็นต้องมีชื่อและอีเมลเพื่อระบุตัวตนของผู้ commit
+   - ใช้คำสั่ง git config user.name "ชื่อที่ตัวเองกำหนด"
+   - ใช้คำสั่ง git config user.email "อีเมลของเรา"
+   - เราสามารถดูcheck point ได้โดยคำสั่ง git log --all --decorate --oneline --ggraph
+ึ7.เมื่อทำการaddไฟล์ และ commitจนครบตามที่เรากำหนด เราสามารถนำไฟล์gitเรา โยนขึ้นเว็บได้
+   โดยใช้คำสั่ง git remote add <ชื่อ remote> <git urlที่เราต้องไปเอามาจากเว็บ>
+   - ถ้าเราอยากเปลี่ยนชื่อ remote ให้ใช้คำสั่ง git remote remove <ชื่อremote> แล้วให้ทำการ git remote add เหมือนตอนremoteครั้งแรก
+   - ก่อนเราจะremoteเข้าไป เราต้องnew repository เพื่อเป็นตัวเก็บไฟล์ที่เราจะส่งขึ้นเว็บ
+8. git push -u ชื่อremote master เพื่อผลักไฟล์ขึ้นเว็บ
+   - ถ้าเรามีการแก้ไขไฟล์ เราแค่พิมพ์ git push ได้เลย 
+
+ถ้าไฟล์บนเครื่อง(local repository) และต้องการไฟล์ ให้เราเปิดgitและพิมพ์คำสั่ง
+git clone <git-url ที่เราไปcopyจากการกดปุ่มclone>
